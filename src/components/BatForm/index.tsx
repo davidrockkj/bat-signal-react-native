@@ -1,6 +1,7 @@
 import React from 'react';
 import { styles } from './styles';
 import { View, Image, ScrollView } from 'react-native';
+import { BatInput } from '../BatInput';
 
 
 import LogoBatman from '../../assets/batman.png';
@@ -13,6 +14,7 @@ export function BatForm() {
           style={{ width: 100, height: 100 }}
         />
       </View>
+      <BatInput />
     </ScrollView>
   );
 }
