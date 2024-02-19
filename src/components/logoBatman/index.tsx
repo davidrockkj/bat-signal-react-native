@@ -8,7 +8,7 @@ export default function logoBatman() {
     <View>
       <Image
         source={logoDoBatman} 
-        style={{ width: 200, height: 200 }}
+        style={{ width: 250, height: 200 }}
       />
     </View>
   );
