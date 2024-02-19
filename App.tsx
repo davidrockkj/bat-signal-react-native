@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, Text } from 'react-native';
 import { BatHome } from './src/components/BatHome';
+import { BatForm } from './src/components/BatForm';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
-      <BatHome />
+      <BatForm />
+      {/* <BatHome /> */}
     </SafeAreaView>
   );
 }
