@@ -1,15 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { BatForm } from './src/components/BatForm';
-import { BatHome } from './src/components/BatHome';
+import LogoBatman from './src/components/logoBatman';
+import { useState } from 'react';
+import BatButton from './src/components/BatButton';
 
 export default function App() {
+
+    const [classeAdicional, setClasseAdicional] = useState('');
+  
+    const toggleClass = () => {
+      setClasseAdicional(classeAdicional === '' ? 'formActive' : '');
+    }
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
 
-      <View  style={styles.home}>
-        <BatHome />
+      <View  style={[styles.home, classeAdicional]}>
+        <LogoBatman />
+        <BatButton 
+          buttonColor='#ffc321'
+          buttonName='Ativar Bat-Sinal'
+          onPress={ (classeAdicional) => setClasseAdicional(classeAdicional === '' ? 'formActive' : '')}
+        />
       </View>
 
       <View style={styles.form}>
@@ -29,13 +43,14 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   home: {
-    
+    width: '60%',
+    gap: 20,
   },
   form: {
     position: 'absolute',
     left: 9999,
   },
   formActive: {
-  
+    left: 0,
   }
 });
