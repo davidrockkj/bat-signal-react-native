@@ -12,13 +12,13 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
+    borderRadius: 10,
   },
   textHeader: {
-    color: '#fff',
-    fontSize: 24,
+    color: '#000',
+    fontSize: 18,
     textAlign: 'center',
     fontWeight: 'bold',
     width: 250,
-    // backgroundColor: '#000',
   }
 });

@@ -3,11 +3,16 @@ import { Pressable, View, Text } from 'react-native';
 
 import { styles } from './styles';
 
-export default function BatButton() {
+type BatButton = {
+  buttonName: string;
+  buttonColor: string;
+}
+
+export default function BatButton({ buttonName, buttonColor }: BatButton) {
   return (
     <View style={styles.container}>
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Press me</Text>
+      <Pressable style={[styles.button, {backgroundColor: buttonColor || 'black'}]}>
+        <Text style={styles.buttonText}>{buttonName}</Text>
       </Pressable>
     </View>
   );

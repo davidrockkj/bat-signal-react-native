@@ -13,7 +13,7 @@ export function BatForm() {
 
       <View style={styles.header}>
         <Image source={LogoBatman} 
-          style={{ width: 100, height: 100, marginRight: 20}}
+          style={{ width: 80, height: 80 }}
         />
 
         <Text style={styles.textHeader}>
