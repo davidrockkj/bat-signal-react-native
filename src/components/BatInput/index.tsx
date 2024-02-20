@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React from 'react';
 import { View, Text, TextInput } from 'react-native';
 
 import { styles } from './styles';
@@ -8,7 +8,6 @@ type GettingProps = {
   mode: any;
   placeholder: string;
   lines: number;
-  text: string;
 }
 
 
@@ -17,7 +16,7 @@ export function BatInput(props: GettingProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>
-        {props.label || 'NOME'}
+        {props.label || 'Label'}
       </Text>
 
       <TextInput
@@ -27,8 +26,7 @@ export function BatInput(props: GettingProps) {
         placeholderTextColor={'#bababa'}
         multiline
         editable
-        numberOfLines={props.lines || 2}
-        value={props.text}
+        numberOfLines={props.lines || 1}
       />
     </View>
   );

@@ -4,12 +4,21 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: '100%',
-    // backgroundColor: 'green',
-    padding: 10,
+    padding: 20,
   },
   header: {
-    backgroundColor: '#fff',
     width: '100%',
     height: 100,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
+  textHeader: {
+    color: '#fff',
+    fontSize: 24,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    width: 250,
+    // backgroundColor: '#000',
+  }
 });
