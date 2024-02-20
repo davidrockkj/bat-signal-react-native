@@ -7,9 +7,9 @@ import { BatInput } from '../BatInput';
 import LogoBatman from '../../assets/batman.png';
 import BatButton from '../BatButton';
 
-export function BatForm() {
+export function BatForm(estilo: any, ...props: any[]) {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={[styles.container, estilo]}>
 
       <View style={styles.header}>
         <Image source={LogoBatman} 
@@ -50,7 +50,10 @@ export function BatForm() {
         placeholder='Dê detalhes do que você está sentindo'
       />
 
-      <BatButton />
+      <BatButton
+        buttonColor='white'
+        buttonName='Enviar'
+      />
 
     </ScrollView>
   );

@@ -5,11 +5,14 @@ import { styles } from './styles';
 import LogoBatman from '../logoBatman';
 import BatButton from '../BatButton';
 
-export function BatHome() {
+export function BatHome(estilo: any, ...props: any[]) {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, estilo]}>
       <LogoBatman />
-      <BatButton />
+      <BatButton 
+        buttonColor='#ffc321'
+        buttonName='Ativar Bat-Sinal'
+      />
     </View>
   );
 }
