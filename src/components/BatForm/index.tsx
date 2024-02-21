@@ -53,6 +53,7 @@ export function BatForm(estilo: any, ...props: any[]) {
       <BatButton
         buttonColor='white'
         buttonName='Enviar'
+        buttonFunction={ () => {alert('Bat Sinal Ligado!')}}
       />
 
     </ScrollView>

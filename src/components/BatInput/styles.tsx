@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
     marginBottom: 5
   },
   input: {
-    width: '100%',
+    width: 350,
+    flexWrap: 'wrap',
     backgroundColor: '#474350',
     borderRadius: 10,
     paddingHorizontal: 15,
