@@ -7,26 +7,26 @@ import BatButton from './src/components/BatButton';
 
 export default function App() {
 
-    const [classeAdicional, setClasseAdicional] = useState('');
+    const [classeAdicional, setClasseAdicional] = useState(false);
   
     const toggleClass = () => {
-      setClasseAdicional(classeAdicional === '' ? 'formActive' : '');
+      setClasseAdicional(!classeAdicional);
     }
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
 
-      <View  style={[styles.home, classeAdicional]}>
+      <View style={styles.home}>
         <LogoBatman />
         <BatButton 
           buttonColor='#ffc321'
           buttonName='Ativar Bat-Sinal'
-          onPress={ (classeAdicional) => setClasseAdicional(classeAdicional === '' ? 'formActive' : '')}
+          buttonFunction={ toggleClass }
         />
       </View>
 
-      <View style={styles.form}>
+      <View style={[styles.form, classeAdicional && styles.formActive]}>
         <BatForm />
       </View>
 
